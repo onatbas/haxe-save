@@ -1,10 +1,11 @@
 AkaSaveUtil
 ===========
 
-Aes-encryption based save util using SharedObjects.
+This is a really,really simple and quick util class for saving and loading data on SharedObject. 
 
- This is a quick util class for saving and loading data on SharedObject.
-I always used stringified jsons for save/load features and SharedObject is quite sufficient cross-platform saving solution. However some might get paranoid (like me) that if you're saving crucial save game data (like a player-id which is used to request client data from server), you shouldn't just save it in easily manipulatable format.
+
+
+I always use stringified jsons for save/load features and SharedObject is quite sufficient cross-platform saving solution. However some might get paranoid (like me) that if you're saving crucial save game data (like a player-id which is used to request client data from server), you shouldn't just save it in easily manipulatable format.
 
 What i do is simply generate a savedata encrypted with a player-specific key (which can easily be facebook id if it's a social game, or you can figure something) and each time client requests to access savedata, device has to know the key to decrypt the value.
 
